@@ -2,6 +2,7 @@ const express = require('express');
 const graphqlHTTP = require('express-graphql').graphqlHTTP;
 const schema = require('./model/restaurantSchema')
 const mongoose = require('mongoose');
+const { eventNames } = require('./model/restaurantMongooseSchema');
 
 mongoose.connect('mongodb+srv://vishalgami:vishalgami@cluster0.dc0fv.mongodb.net/sample_restaurants?retryWrites=true&w=majority')
 
@@ -25,6 +26,6 @@ app.get('/',function (req, res) {
     res.redirect('/graphql');
 });
 
-app.listen(3000, () => {
+app.listen(process.env.PORT || 3000, () => {
     console.log('Listening on port 3000');
 });
