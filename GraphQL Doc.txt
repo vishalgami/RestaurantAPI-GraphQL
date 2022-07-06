@@ -1,0 +1,37 @@
+# {
+#   Restaurants(id: "5eb3d668b31de5d588f4292a") {
+#     name
+#     borough
+#     restaurant_id
+#     cuisine
+#     grades {
+#       date
+#       grade
+#       score
+#     } 
+#     address{
+#       building
+#       zipcode
+#       coord
+#     }
+#   }
+# }
+
+# mutation{
+#   addRestaurant(name:"Tamsha",borough: "Etobicoke",cuisine: "Indian",restaurant_id: "21212"){
+#     name
+#   }
+# }
+
+# {
+#   findByBorough(borough: "Delicatessen"){
+#     name
+#   }
+# }
+
+
+# {
+# findByRestaurantId(id: "40356483"){
+#     name
+#   }
+# }
